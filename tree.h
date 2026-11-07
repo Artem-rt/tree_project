@@ -26,5 +26,6 @@ void dellite_node (struct Tree_Node** node, struct Tree* tree);
 void link_left (struct Tree_Node** sun, struct Tree_Node** parent, struct Tree* tree);
 void link_right (struct Tree_Node** child, struct Tree_Node** parent, struct Tree* tree);
 void print_tree_preorder (struct Tree_Node* start_node);
+void print_tree_inorder (struct Tree_Node* start_node);
 // -----------------------------------------------------------------------------
 #endif

@@ -82,4 +82,17 @@ void print_tree_preorder (struct Tree_Node* start_node) //TODO: print file
     printf (" )");
 }
 
+void print_tree_inorder (struct Tree_Node* start_node) //TODO: print file
+{
+    assert (start_node);
+
+    printf ("( ");
+    if (start_node -> left_child_node) print_tree_inorder (start_node -> left_child_node);
+    else printf ("nil");
+    printf (SPECIF_TYPE, start_node -> data);
+    if (start_node -> right_child_node) print_tree_inorder (start_node -> right_child_node);
+    else printf ("nil");
+    printf (" )");
+}
+
 #endif

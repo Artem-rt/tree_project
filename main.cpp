@@ -31,6 +31,9 @@ int main ()
     print_tree_preorder (tree_one.root_node);
     printf ("\n");
 
+    print_tree_inorder (tree_one.root_node);
+    printf ("\n");
+
     dellite_node (&node_rlr, &tree_one);
     dellite_node (&node_rll, &tree_one);
     dellite_node (&node_rl, &tree_one);
