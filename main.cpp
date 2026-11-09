@@ -17,22 +17,24 @@ int main ()
     tree_init (&tree_one, &root_node);
 
     create_node (&node_rl, 20);
-    link_left (&node_rl, &root_node, &tree_one);
+    link_left (node_rl, root_node, &tree_one);
 
     create_node (&node_rr, 30);
-    link_right (&node_rr, &root_node, &tree_one);
+    link_right (node_rr, root_node, &tree_one);
 
     create_node (&node_rll, 40);
-    link_left (&node_rll, &node_rl, &tree_one);
+    link_left (node_rll, node_rl, &tree_one);
 
     create_node (&node_rlr, 50);
-    link_right (&node_rlr, &node_rl, &tree_one);
+    link_right (node_rlr, node_rl, &tree_one);
 
     print_tree_preorder (tree_one.root_node);
     printf ("\n");
 
     print_tree_inorder (tree_one.root_node);
     printf ("\n");
+
+    dump_tree (&tree_one);
 
     dellite_node (&node_rlr, &tree_one);
     dellite_node (&node_rll, &tree_one);
